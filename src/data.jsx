@@ -215,9 +215,9 @@ export const contacts = [
     value:[
       "C11, Major V.O Abiola lane, Okuta Elerinla Estate, Akure.",
 
-      "2 All for God Shopping Plaza, Fajuyi Road, Ile-Ife",
+      "2 All for God Shopping Plaza, Fajuyi Road, Ile-Ife.",
       
-      "17 Idama Estate, PTI road, Warri, Delta State"
+      "17 Idama Estate, PTI road, Warri, Delta State."
     ],
     icon:<IoLocationOutline/>,
   },

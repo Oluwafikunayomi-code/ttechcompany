@@ -7,6 +7,7 @@ import Project from "./Components/Project"
 import Testimonial from "./Components/Testimonial"
 import Faq from "./Components/Faq"
 import Contact from "./Components/Contact"
+import Footer from "./Components/Footer"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
      <Testimonial/>
      <Faq/>
      <Contact/>
+     <Footer/>
     </>
   )
 }
