@@ -12,7 +12,7 @@ const Footer = () => {
                     {
                         footer.map((list,index) =>(
                             <div className="column" key={index}>
-                                <h3 className="routes__name">{list.group}</h3>
+                                <h3 className="routes__name">{list.name}</h3>
                                 <div className="routes__container">
                                     {
                                         list.routes.map((route,i)=>(
@@ -28,11 +28,7 @@ const Footer = () => {
                     <div className="column">
                         <Logo/>
                         <div className="newsletter">
-                            <h3>Get weekly updates</h3>
-                            <div className="control__container">
-                                <input type='email' placeholder='Enter your email address' className="control" />
-                                <button className="btn">Subscribe</button>
-                            </div>
+                            <img src="/icon.png" alt="Company-logo" />
                         </div>
                     </div>
                 </div>

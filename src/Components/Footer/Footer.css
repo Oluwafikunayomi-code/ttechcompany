@@ -23,6 +23,7 @@
     font-size: 15px;
     margin: 10px 0;
     cursor: pointer;
+    display: block;
 }
 
 #footer .routes__container .route__item:hover{
@@ -88,10 +89,16 @@
 
 @media(max-width: 900px){
     #footer .row{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 768px){
+    #footer .row{
         grid-template-columns: 100%;
     }
     #footer .logo{
         justify-content: center;
+        margin-bottom: 10px;
     }
     #footer .newsletter h3{
         text-align: center;

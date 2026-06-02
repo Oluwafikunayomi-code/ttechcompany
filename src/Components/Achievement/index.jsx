@@ -33,24 +33,30 @@ const Achievement = () =>  {
     }
 
     useGSAP(() => {
-  ScrollTrigger.create({
-    trigger: container.current,
-    start: "top 80%",
-    onEnter: () => {
-      gsap.to({}, {
-        duration: 2,
-        onUpdate: function () {
-          const progress = this.progress();
-          setClients(Math.floor(progress * 100));
-          setProjects(Math.floor(progress * 50));
-          setTeam(Math.floor(progress * 20));
-          setAwards(Math.floor(progress * 10));
-        }
+      const trigger = ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 80%",
+        onEnter: () => {
+          gsap.to({}, {
+            duration: 2,
+            onUpdate: function () {
+              const progress = this.progress();
+              setClients(Math.floor(progress * 100));
+              setProjects(Math.floor(progress * 50));
+              setTeam(Math.floor(progress * 20));
+              setAwards(Math.floor(progress * 10));
+            }
+          });
+        },
+        onLeaveBack: resetData,
       });
-    },
-    onLeaveBack: resetData,
-  });
-}, { scope: container });
+
+      return () => {
+        if (trigger) {
+          trigger.kill();
+        }
+      };
+    }, { scope: container });
 
 
 

@@ -52,7 +52,7 @@ const Contact = () => {
                                 <div className="icon__container">{contact.icon}</div>
                                 <div className="details">
                                     <p className="text__muted">{contact.name}</p>
-                                    <h3 className="value" address-group>
+                                    <h3 className="value">
                                         {Array.isArray(contact.value) ? (
                                             contact.value.map((item, i) => (
                                                 <p key={i} className="address-line">{item}</p>
