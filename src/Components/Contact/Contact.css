@@ -91,6 +91,8 @@
     justify-content: center;
 }
 
+
+
 @media (max-width:900px){
     #contact .container{
         grid-template-columns: 100%;
