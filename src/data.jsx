@@ -8,13 +8,13 @@ import { profile2, profile3,profile4,profile5,
          member3, member4, elevator, solar_1, solar_2, light_1, light_2, light_3, hvac} from "./assets";
 
 export const navTabs = [
-    {name:"Home",id:'header'},
-    {name:"About Us",id:'about'},
-    {name:"Services",id:'services'},
-    {name:"Project",id:'project'},
-    {name:"Clients",id:'testimonial'},
+    {name:"HOME",id:'header'},
+    {name:"ABOUT US",id:'about'},
+    {name:"SERVICES",id:'services'},
+    {name:"PROJECT",id:'project'},
+    {name:"CLIENTS",id:'testimonial'},
     {name:"FAQ",id:'faq'},
-    {name:"Contact",id:'contact'},
+    {name:"CONTACT",id:'contact'},
 ];
 
 export const services = [
@@ -227,14 +227,14 @@ export const footer = [
     {
       name:"Explore",
       routes:[
-        {name:"Home",id:'header'},
-        {name:"About Us",id:'about'},
-        {name:"Services",id:'services'},
-        {name:"Team",id:'team'},
-        {name:"Project",id:'project'},
-        {name:"Clients",id:'testimonial'},
+        {name:"HOME",id:'header'},
+        {name:"ABOUT US",id:'about'},
+        {name:"SERVICES",id:'services'},
+        {name:"TEAM",id:'team'},
+        {name:"PROJECT",id:'project'},
+        {name:"CLIENTS",id:'testimonial'},
         {name:"FAQ",id:'faq'},
-        {name:"Contact",id:'contact'},
+        {name:"CONTACT",id:'contact'},
       ]
     },
     {
