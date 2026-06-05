@@ -12,7 +12,6 @@
 
 #testimonial .slick-track{
     display: flex !important;
-    gap: 20px;
 }
 
 #testimonial .slick-slide{

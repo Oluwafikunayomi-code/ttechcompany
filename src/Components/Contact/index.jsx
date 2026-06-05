@@ -9,6 +9,12 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
+    const [notification, setNotification] = useState({
+  show: false,
+  message: "",
+  type: "",
+});
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -30,7 +36,19 @@ const Contact = () => {
 
             console.log(response);
 
-            alert("Message sent successfully!");
+            setNotification({
+  show: true,
+  message: "Thank you! Your message has been sent successfully. We'll get back to you shortly.",
+  type: "success",
+});
+
+setTimeout(() => {
+  setNotification({
+    show: false,
+    message: "",
+    type: "",
+  });
+}, 4000);
 
             setName('');
             setEmail('');
@@ -38,7 +56,19 @@ const Contact = () => {
 
         } catch (error) {
             console.error(error);
-            alert("Failed to send message");
+            setNotification({
+  show: true,
+  message: "Failed to send message. Try again or contact us directly.",
+  type: "error",
+});
+
+setTimeout(() => {
+  setNotification({
+    show: false,
+    message: "",
+    type: "",
+  });
+}, 4000);
         }
     };
 
@@ -73,6 +103,11 @@ const Contact = () => {
                             We are ready to offer our service, send us your details and its done.
                         </p>
                     </div>
+                    {notification.show && (
+  <div className={`notification ${notification.type}`}>
+    {notification.message}
+  </div>
+)}
                     <form onSubmit={handleSubmit} className='form__middle'>
                         <div className="row">
                             <input 

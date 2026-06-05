@@ -44,6 +44,8 @@ html, body{
 body{
   overflow: hidden;
   overflow-y: auto;
+  width: 100%;
+  min-height: 100vh;
   max-width: 2000px;
   margin: auto;
 }
@@ -219,5 +221,11 @@ small{
   }
   .btn{
     font-size: 12px;
+  }
+}
+@media (max-width:300px) {
+  body{
+    max-width: 100%;
+    position: relative;
   }
 }
