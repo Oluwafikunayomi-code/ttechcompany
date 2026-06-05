@@ -35,11 +35,14 @@
 
 html, body, #root {
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   min-height: 100vh;
   font-family: "Sora", sans-serif;
   color: var(--color-text);
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   background: var(--color-ui-primary);
 }
 
