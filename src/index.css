@@ -33,7 +33,9 @@
   scrollbar-color: var(--color-primary) transparent ;
 }
 
-html, body{
+html, body, #root {
+  overflow-x: hidden;
+  width: 100%;
   min-height: 100vh;
   font-family: "Sora", sans-serif;
   color: var(--color-text);
@@ -41,13 +43,12 @@ html, body{
   background: var(--color-ui-primary);
 }
 
-body{
-  overflow: hidden;
+body {
+  overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
   min-height: 100vh;
-  max-width: 2000px;
-  margin: auto;
+  margin: 0;
 }
 
 a{
@@ -64,12 +65,11 @@ p{
   font-weight: 400;
   line-height: 21px;
 }
-img{
+img {
   width: 100%;
+  height: auto;
   object-fit: cover;
-  min-height: 100%;
   display: block;
-  transition: var(--transition);
 }
 small{
   display: block;
@@ -227,5 +227,80 @@ small{
   body{
     max-width: 100%;
     position: relative;
+  }
+}
+@media (max-width: 360px) {
+
+  /* ===== GLOBAL CONTAINER FIX ===== */
+  .container {
+    padding: 20px 12px;
+  }
+
+  /* ===== TEXT FIX ===== */
+  .title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .sub__title {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* ===== GRID FIX (2 COL → 1 COL) ===== */
+  #about .group {
+    grid-template-columns: 1fr;
+  }
+
+  /* If you have other grids */
+  #services .grid,
+  .services__container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== FLEX BUTTON FIX ===== */
+  .buttons__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== NAV FIX ===== */
+  .nav__tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tab {
+    font-size: 12px;
+  }
+
+  /* ===== IMAGE SAFETY ===== */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ===== ABOUT ROW FIX ===== */
+  #about .group .row {
+    flex-wrap: wrap;
+  }
+
+  #about .group .row .details {
+    min-width: 0;
+  }
+
+  #about .group .row .details * {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }

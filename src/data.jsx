@@ -5,7 +5,7 @@ import { CiLinkedin ,CiFacebook} from "react-icons/ci";
 import { profile2, profile3,profile4,profile5,
          panel,turbine,batteries, inspection, 
          electrical, mechanical, member1, member2, 
-         member3, member4, elevator, solar_1, solar_2, light_1, light_2, light_3, hvac} from "./assets";
+         member3, member4, elevator, solar_1, solar_2, light_1, light_2, light_3, rural, hvac} from "./assets";
 
 export const navTabs = [
     {name:"HOME",id:'header'},
@@ -86,7 +86,7 @@ export const projects = [
   },
   {
     title:"Electrification",
-    image:"https://en.wikipedia.org/wiki/File:20111110-OC-AMW-0030_-_Flickr_-_USDAgov.jpg",
+    image: rural,
     category:"Electrical",
     description:`ECN Rural Electrification projects done in Kano, Ondo, Kaduna, Zamfara
                  Plateau and Jigawa States`,

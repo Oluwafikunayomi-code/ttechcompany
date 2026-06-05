@@ -27,9 +27,6 @@ const Footer = () => {
                     }
                     <div className="column">
                         <Logo/>
-                        <div className="newsletter">
-                            <img src="/icon.png" alt="Company-logo" />
-                        </div>
                     </div>
                 </div>
             </div>

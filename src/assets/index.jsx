@@ -23,3 +23,4 @@ export {default as light_2} from "./light-2.png";
 export {default as light_3} from "./light-3.png";
 export {default as hvac} from "./HVAC.png";
 export {default as elevator} from "./elevator.png";
+export {default as rural} from "./Rural.jpg";
