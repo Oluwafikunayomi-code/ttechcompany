@@ -33,28 +33,23 @@
   scrollbar-color: var(--color-primary) transparent ;
 }
 
-html, body, #root {
-  overflow-x: hidden;
-  overflow-y: auto !important;
-  height: auto !important;
-  width: 100%;
-  min-height: 100vh;
-  font-family: "Sora", sans-serif;
-  color: var(--color-text);
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  touch-action: auto;
-  background: var(--color-ui-primary);
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto !important;
-  height: auto !important;
-  width: 100%;
-  min-height: 100vh;
   margin: 0;
-  position: relative;
+  padding: 0;
+  width: 100%;
+  font-family: "Sora", sans-serif;
+  color: var(--color-text);
+  background: var(--color-ui-primary);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  display: block;
 }
 
 a{

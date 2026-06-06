@@ -25,6 +25,18 @@ const Navbar = () => {
         window.addEventListener('scroll',handleScroll)
         return () => window.removeEventListener('scroll',handleScroll)
     },[])
+
+    useEffect(()=>{
+        if(open){
+            document.body.style.overflow = 'hidden';
+        }
+        else{
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        }
+    },[open])
     return (
         <nav className={`navbar ${activeNavbar ? 'active':''}`}>
             {
