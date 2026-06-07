@@ -10,6 +10,10 @@
     display: none !important;
 }
 
+#testimonial .slick-list {
+    margin: 0 -10px;
+}
+
 #testimonial .slick-track{
     display: flex !important;
 }
@@ -17,12 +21,15 @@
 #testimonial .slick-slide{
     height: inherit !important;
     padding: 20px;
+    margin: 0 10px;
     border: solid 2px var(--color-primary);
     border-radius: var(--radius-3);
     display: flex;
     flex-direction: column;
     background: var(--color-ui-secondary);
     transition: var(--transition);
+    gap: 5px;
+    box-sizing: border-box;
 }
 
 #testimonial .slick-slide:hover {

@@ -11,6 +11,15 @@ import { useState } from 'react';
 const Navbar = () => {
     const [open,setOpen] = useState(false)
     const [activeNavbar,setActiveNavbar] = useState(false)
+
+    useEffect(() => {
+  console.log("open =", open);
+}, [open]);
+
+const handleCloseMenu = () => {
+  setOpen(false);
+};
+
     const handleScroll = () =>{
         const currentScrollPos = window.scrollY;
         if(currentScrollPos > 50){
@@ -49,7 +58,7 @@ const Navbar = () => {
             }
             <Logo/>
             <div className={`box nav__tabs ${open ? 'visible':''}`}>
-                <div className="icon__container cancel__btn" onClick={()=>setOpen(!open)}>
+                <div className="icon__container cancel__btn" onClick={handleCloseMenu}>
                     <FaTimes/>
                 </div>
                 {
@@ -62,7 +71,7 @@ const Navbar = () => {
                         duration={320}
                         spy={true}
                         offset={-70}
-                        onClick={()=>setOpen(!open)}
+                        onClick={handleCloseMenu}
                         key={index}
                         >
                             {tab.name}
