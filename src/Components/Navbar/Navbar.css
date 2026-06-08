@@ -158,7 +158,7 @@
 
 @media (max-width:320px) {
   .navbar .nav__tabs {
-    padding-top: 65px;
+    padding-top: 10px;
   }
 
   .nav__tabs {
@@ -171,5 +171,11 @@
     width: 100%;
     text-align: center;
     padding: 10px 12px;
+  }
+}
+
+@media (max-width:300px) {
+  .navbar .nav__tabs {
+    padding-top: 10px;
   }
 }
