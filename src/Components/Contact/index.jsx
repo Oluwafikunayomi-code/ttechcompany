@@ -132,7 +132,7 @@ setTimeout(() => {
                         id="" 
                         cols={30} 
                         rows={5} 
-                        placeholder='Your message' 
+                        placeholder='Your message...' 
                         value={message}
                         onChange={(e)=>setMessage(e.target.value)}
                         className='control'></textarea>
